@@ -45,9 +45,11 @@
 			
 				<!--Event listener starting code-->
 				function selectHandler(initialDate) {
-					var selectedItem = initialDate || chart.getSelection()[0];
+					var selectedItem;
+					var selected = initialDate || chart.getSelection();
 					if (selectedItem.length > 0) {
 						console.log(new Date(selectedItem[0].date));
+						selectedItem = selection[0];
 					}
 					if (selectedItem) {
 						var dateindex=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
